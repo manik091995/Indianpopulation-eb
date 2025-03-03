@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Video container */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;/* Ensures video fills the screen */
+        }
+
+        /* Navigation bar */
+        .nav-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.3); /* Lighter transparent background */
+            padding: 15px 0;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-bar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 60px;
+        }
+
+        .nav-bar li {
+            display: inline;
+        }
+
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .nav-bar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Overlay content */
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            width: 90%;
+        }
+
+        h1 {
+            font-size: 8vw; /* Responsive font size */
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 40px;
+            font-size: 1.5vw;
+            background: transparent;
+            border: 2px solid white;
+            border-radius: 30px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-bar {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .nav-bar ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            h1 {
+                font-size: 12vw; /* Larger font for smaller screens */
+            }
+
+            button {
+                font-size: 3vw;
+                padding: 10px 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-bar {
+                padding: 5px;
+            }
+
+            .nav-bar ul {
+                gap: 5px;
+            }
+
+            h1 {
+                font-size: 15vw; /* Adjust for very small screens */
+            }
+
+            button {
+                font-size: 4vw;
+                padding: 8px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="India.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="nav-bar">
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#beaches">DATA</a></li>
+            <li><a href="#popular-places">CHARTS AND MAPS</a></li>
+            <li><a href="#contact">CONTACT US</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>India Population Review</h1>
+        <button>Explore</button>
+    </div>
+
+</body>
+</html>

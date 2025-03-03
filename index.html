@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Population Review</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="#home" class="active">HOME</a></li>
+            <li><a href="#data">DATA</a></li>
+            <li><a href="#charts">CHARTS AND MAPS</a></li>
+            <li><a href="#contact">CONTACT US</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="section">
+        <div class="video-background">
+            <video autoplay muted loop>
+                <source src="static/videos/India.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="content">
+            <h1>India Population<br>Review</h1>
+            <button onclick="scrollToSection('data')">Explore</button>
+        </div>
+    </section>
+
+    <section id="data" class="section">
+        <div class="background-image" style="background-image: url('static/images/education.png')"></div>
+        <div class="content">
+            <h2>Population Data</h2>
+            <div class="data-grid">
+                <div class="data-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Total Population</h3>
+                    <p>1.4 Billion</p>
+                </div>
+                <div class="data-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Growth Rate</h3>
+                    <p>1.1% per year</p>
+                </div>
+                <div class="data-card">
+                    <i class="fas fa-male"></i>
+                    <h3>Gender Ratio</h3>
+                    <p>108 males : 100 females</p>
+                </div>
+                <div class="data-card">
+                    <i class="fas fa-city"></i>
+                    <h3>Urban Population</h3>
+                    <p>35% of total</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="charts" class="section">
+        <div class="background-image" style="background-image: url('static/images/students.png')"></div>
+        <div class="content">
+            <h2>Charts and Maps</h2>
+            <div class="visualization-container">
+                <div id="chart-placeholder" class="chart">
+                    <i class="fas fa-chart-bar"></i>
+                    <p>Population Distribution Chart</p>
+                </div>
+                <div id="map-placeholder" class="map">
+                    <i class="fas fa-map"></i>
+                    <p>Population Density Map</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="background-image" style="background-image: url('static/images/community.png')"></div>
+        <div class="content">
+            <h2>Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@indiapopulation.org</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+91 123 456 7890</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-location-dot"></i>
+                        <p>New Delhi, India</p>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="static/js/main.js"></script>
+</body>
+</html>
