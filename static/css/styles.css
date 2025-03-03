@@ -1,0 +1,316 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Section Styles */
+.section {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Navigation */
+.nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px 0;
+    z-index: 1000;
+    transition: background 0.3s;
+}
+
+.nav-bar.scrolled {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.nav-bar a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s;
+}
+
+.nav-bar a:hover::after,
+.nav-bar a.active::after {
+    width: 100%;
+}
+
+.nav-bar a:hover,
+.nav-bar a.active {
+    color: white;
+}
+
+/* Video Background */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Background Overlays */
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.background-overlay.dark {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.background-overlay.light {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Update the background-image styles */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* Content Styles */
+.content {
+    position: relative;
+    z-index: 2;
+    padding: 80px 20px;
+    color: white;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 8vw;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+h2 {
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px; /* Adjusted padding */
+    font-size: 1.5vw;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-block;
+    width: fit-content;
+    margin: 0 auto; /* Center the button */
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Data Section */
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.data-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s;
+}
+
+.data-card:hover {
+    transform: translateY(-10px);
+}
+
+.data-card i,
+.chart i, 
+.map i,
+.contact-item i {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Charts Section */
+.visualization-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 20px;
+}
+
+.chart, .map {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Contact Section */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.2rem;
+}
+
+
+.social-links {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 2rem;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #ffd700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-bar ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 12vw;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .data-grid,
+    .visualization-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+    button {
+        font-size: 3vw;
+        padding: 8px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 15vw;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .contact-item {
+        font-size: 1rem;
+    }
+    button {
+        font-size: 4vw;
+        padding: 8px 20px;
+    }
+}
